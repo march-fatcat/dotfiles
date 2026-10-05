@@ -15,3 +15,13 @@
 ## 记忆与凭据
 
 运行时记忆放在 `~/.hermes`，不提交到此仓库。所有 token 只通过 `~/.hermes/.env` 或进程环境传入。
+
+## GitHub write guard
+
+Before any GitHub write (push, PR, issue, comment, label, release, or workflow action), run:
+
+```bash
+~/.hermes/workspace/scripts/verify-github-write.sh
+```
+
+The guard must print `GitHub write identity verified: march-fatcat`. If it fails, stop and ask the owner to switch accounts; never continue with another GitHub identity.
