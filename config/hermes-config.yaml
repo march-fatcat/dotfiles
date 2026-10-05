@@ -1,8 +1,8 @@
 # Copy the relevant sections into ~/.hermes/config.yaml after `hermes setup`.
 # Secrets belong in ~/.hermes/.env; do not put tokens here.
 model:
-  provider: auto
-  default: anthropic/claude-opus-4.6
+  provider: openai-codex
+  default: gpt-5.4
 
 platforms:
   telegram:
