@@ -2,7 +2,7 @@
 # Secrets belong in ~/.hermes/.env; do not put tokens here.
 model:
   provider: openai-codex
-  default: gpt-5.4
+  default: gpt-6.1-sol
 
 platforms:
   telegram:
