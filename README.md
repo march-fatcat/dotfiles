@@ -54,3 +54,21 @@ hermes doctor
 - `.env`、运行时数据库、会话日志、记忆目录不进入仓库；
 - `IDENTITY.md` 和 `USER.md` 只包含公开占位信息；
 - 不复制 lodekeeper 的个人 Telegram/Discord ID、GitHub 写权限或私有工作记忆。
+
+## 订阅登录（无需模型 API key）
+
+Hermes 也支持通过 OAuth 使用订阅：
+
+```bash
+# Nous Portal 订阅，推荐
+hermes setup --portal
+
+# 已安装 Hermes 时，也可以单独登录
+hermes portal
+
+# ChatGPT / Codex 订阅
+hermes auth add openai-codex --type oauth
+hermes model
+```
+
+订阅登录只替代模型/工具提供商的 API key；Telegram 和 Discord 仍然需要各自的 bot token。Anthropic OAuth 需要符合 Hermes 文档要求的 Claude Max + extra usage，Claude Pro 不能直接替代 API key。
