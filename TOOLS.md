@@ -8,3 +8,12 @@
 - 工作区：`~/.hermes/workspace`
 - Gateway：`hermes gateway setup` / `hermes gateway start`
 - 诊断：`hermes doctor`
+
+
+## GitHub
+
+- **Acting account:** `march-fatcat`
+- **Authentication:** use the local `gh` credential store; never put tokens in this repository, `.env`, or chat.
+- **Before any write:** run `gh auth status` and `gh api user --jq .login`; both must identify `march-fatcat`.
+- **PR workflow:** work in a checkout, use a feature branch, run relevant checks, then create the PR with `gh pr create`.
+- **Git transport:** run `gh auth setup-git` once if HTTPS pushes are not using the authenticated account.
