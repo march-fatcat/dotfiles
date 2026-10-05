@@ -1,0 +1,17 @@
+# Copy the relevant sections into ~/.hermes/config.yaml after `hermes setup`.
+# Secrets belong in ~/.hermes/.env; do not put tokens here.
+model:
+  provider: auto
+  default: anthropic/claude-opus-4.6
+
+platforms:
+  telegram:
+    enabled: true
+    extra:
+      allowed_users: []
+  discord:
+    enabled: true
+    extra:
+      allowed_users: []
+      require_mention: true
+      thread_require_mention: false

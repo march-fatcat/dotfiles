@@ -1,0 +1,9 @@
+.env
+*.env
+.hermes/
+state.db
+*.db
+logs/
+memory/
+__pycache__/
+.DS_Store
